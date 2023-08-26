@@ -25,6 +25,7 @@ clean() {
 
 dev() {
     docker run --rm --gpus=all --entrypoint=sh \
+        -e PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128 \
         -v huggingface:/home/huggingface/.cache/huggingface \
         -v "$PWD"/input:/home/huggingface/input \
         -v "$PWD"/output:/home/huggingface/output \
