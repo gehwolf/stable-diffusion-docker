@@ -1,0 +1,1 @@
+./build.sh run --attention-slicing --prompt "earl gray, hot!" --n_iter 5
